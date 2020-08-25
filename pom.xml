@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.codelifeliwan.rpc</groupId>
+    <artifactId>easy-rpc</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>server</module>
+        <module>client</module>
+        <module>core</module>
+        <module>samples</module>
+    </modules>
+
+    <properties>
+        <java.version>10</java.version>
+        <maven.compiler.source>10</maven.compiler.source>
+        <maven.compiler.target>10</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.10</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.26</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.68</version>
+        </dependency>
+    </dependencies>
+
+    <developers>
+        <developer>
+            <id>codelifeliwan</id>
+            <name>万力</name>
+            <email>codelifeliwan@sina.com</email>
+        </developer>
+        <developer>
+            <id>lyc</id>
+            <name>刘雨晨</name>
+            <email>imlyclo@163.com</email>
+        </developer>
+        <developer>
+            <id>keven</id>
+            <name>张旭</name>
+            <email>2842161921@qq.com</email>
+        </developer>
+    </developers>
+
+    <build>
+        <finalName>easy-rpc</finalName>
+    </build>
+
+</project>

@@ -1,0 +1,23 @@
+# easyrpc server config
+server:
+  # 监听端口
+  port: 8912
+  # 监听线程模式，有 single (单线程处理，业务执行具有原子性), multi (NIO主从多线程模型，效率较高，暂未实现)
+  thread: multi
+  # 消息序列化类
+  serializer: com.codelifeliwan.rpc.core.serializer.DefaultMessageSerializer
+  # 注册的类，格式：bean-name:bean-class, model(singleton/prototype, default is singleton)
+  beans:
+    testBean: com.codelifeliwan.rpc.samples.models.server.SampleDoServerClass
+    sortBean: com.codelifeliwan.rpc.samples.models.server.SampleDoSort
+
+# easyrpc client config
+client:
+  # 通讯的服务器，多个用逗号隔开，多个服务器的时候会自动负载均衡（随机值hash）
+  server: localhost:8912
+  # 消息序列化类
+  serializer: com.codelifeliwan.rpc.core.serializer.DefaultMessageSerializer
+  # 需要被实例化的接口
+  beans:
+    testBean: com.codelifeliwan.rpc.samples.models.client.SampleDoClientInterface
+    sortBean: com.codelifeliwan.rpc.samples.models.client.SampleSort
